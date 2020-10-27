@@ -1,0 +1,24 @@
+.formUser {
+    align-items: center;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.bottuns {
+    margin: 20px auto;
+}
+
+.formUser button{
+    font-size: 14pt;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.formUser button:hover{
+    color: black;
+}
+.formUser a{
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
