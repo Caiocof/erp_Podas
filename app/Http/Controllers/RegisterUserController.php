@@ -17,15 +17,6 @@ class RegisterUserController extends Controller
         return view('User.registerUser');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -35,7 +26,16 @@ class RegisterUserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = [
+            'tlogin_nome' => $request->nome,
+            'tlogin_nome_completo' => $request->nomecompleto,
+            'tlogin_pass' => bcrypt($request->senha)
+        ];
+
+        registerUser::create($user);
+
+        return redirect()->action([RegisterUserController::class, 'index']);
+
     }
 
     /**

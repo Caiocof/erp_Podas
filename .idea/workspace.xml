@@ -1,13 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="50952a33-232a-41d7-8088-1903f1c31731" name="Default Changelist" comment="" />
+    <list default="true" id="50952a33-232a-41d7-8088-1903f1c31731" name="Default Changelist" comment="create project">
+      <change afterPath="$PROJECT_DIR$/resources/views/Works/listWorks.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Works/registerWorks.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RegisterUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RegisterUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/registerUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/registerUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/User/registerUser.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/User/registerUser.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -137,9 +167,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/image" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -152,12 +183,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\User" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\public\image" />
       <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\User" />
     </key>
   </component>
   <component name="RunManager">
@@ -174,25 +205,58 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603818582996</updated>
-      <workItem from="1603818585414" duration="9780000" />
+      <workItem from="1603818585414" duration="10189000" />
+      <workItem from="1603904463268" duration="27000" />
+      <workItem from="1603905810971" duration="9213000" />
     </task>
+    <task id="LOCAL-00001" summary="create project">
+      <created>1603828836116</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603828836116</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create project" />
+    <option name="LAST_COMMIT_MESSAGE" value="create project" />
   </component>
   <component name="WindowStateProjectService">
     <state x="549" y="154" key="FileChooserDialogImpl" timestamp="1603828782198">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="154" key="FileChooserDialogImpl/0.0.1536.824/-1366.303.1366.728@0.0.1536.824" timestamp="1603828782198" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1603826745484">
+    <state x="647" y="310" key="Github.ShareDialog" timestamp="1603828970387">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824/-1366.303.1366.728@0.0.1536.824" timestamp="1603826745484" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1603824672335">
+    <state x="647" y="310" key="Github.ShareDialog/0.0.1536.824/-1366.303.1366.728@0.0.1536.824" timestamp="1603828970387" />
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1603911202209">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824/-1366.303.1366.728@0.0.1536.824" timestamp="1603824672335" />
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824/-1366.303.1366.728@0.0.1536.824" timestamp="1603911202209" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1603909845484">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824/-1366.303.1366.728@0.0.1536.824" timestamp="1603909845484" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603828986049">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1366.303.1366.728@0.0.1536.824" timestamp="1603828986049" />
   </component>
 </project>

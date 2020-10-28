@@ -1,7 +1,9 @@
 @extends('master')
 @section('content')
 
-    <form class="formUser" action="POST" autocomplete="off">
+    <h1 class="titlePage">CADASTRO DE USUÁRIOS</h1>
+    <hr/>
+    <form class="formsProject" action="{{route('saveUser')}}" method="POST" autocomplete="off" enctype="multipart/form-data">
         @csrf
         <div class="form-row">
             <div class="form-group col-md-4">
@@ -10,7 +12,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="text">Nome Completo </label>
-                <input type="text" class="form-control" id="nomecompleto">
+                <input type="text" class="form-control" name="nomecompleto">
             </div>
 
             <div class="form-group col-md-2">

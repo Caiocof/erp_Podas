@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterUserController;
+use App\Http\Controllers\WorksController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +19,12 @@ Route::get('/', function () {
     return view('master');
 });
 
-Route::get('/CadastrarUsuario', [\App\Http\Controllers\RegisterUserController::class, 'index'])->name('regiterUser');
+//USER
+Route::get('/cadastraUsuario', [RegisterUserController::class, 'index'])->name('regiterUser');
+Route::post('/cadastraUsuario/store', [RegisterUserController::class, 'store'])->name('saveUser');
+
+
+//WORKS
+Route::get('/listaFuncionario', [WorksController::class, 'index'])->name('listWorks');
+Route::get('/cadastraFuncionario', [WorksController::class, 'create'])->name('registerWorks');
+Route::post('/cadastraFuncionario/store', [WorksController::class, 'store'])->name('saveWorks');

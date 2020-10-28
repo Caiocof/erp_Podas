@@ -19,9 +19,9 @@
         <a class="navbar-brand" href="{{url('/')}}">
             <img src="{{asset('image/logopodas.png')}}" width="40" class="d-inline-block align-top" alt="">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+        <button class="navbar-toggler  navbar-light" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
                 aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:#fff; font-size:28px;"></i></span>
         </button>
 
         <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
@@ -37,7 +37,7 @@
                     <div class="dropdown-menu subItens" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{route('regiterUser')}}">Usuários</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Funcionários</a>
+                        <a class="dropdown-item" href="{{route('listWorks')}}">Funcionários</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Equipes</a>
                         <div class="dropdown-divider"></div>
