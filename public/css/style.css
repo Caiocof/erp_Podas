@@ -39,32 +39,14 @@
 
 .table {
     border-collapse: collapse;
-    border: 2px solid #10834b;
-    width: 100%;
+    border: 1px solid #10834b;
 }
 
-tbody {
-    font-size: 110%;
-    font-family: Arial;
-    letter-spacing: 0px;
-}
-
-tfoot {
-    font-weight: bold;
-    font-size: 100%;
-}
 
 thead {
     background-color: #10834b;
-    font-size: large;
     font-stretch: normal;
     text-align: left;
     color: ivory;
-    font-family: Arial;
     letter-spacing: 0px;
-}
-
-td {
-    text-align: left;
-    border: 1px solid rgba(0, 0, 0, 0.2);
 }

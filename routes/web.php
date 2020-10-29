@@ -28,3 +28,4 @@ Route::post('/cadastraUsuario/store', [RegisterUserController::class, 'store'])-
 Route::get('/listaFuncionario', [WorksController::class, 'index'])->name('listWorks');
 Route::get('/cadastraFuncionario', [WorksController::class, 'create'])->name('registerWorks');
 Route::post('/cadastraFuncionario/store', [WorksController::class, 'store'])->name('saveWorks');
+Route::get('/editarFuncionario/{id}', [WorksController::class, 'edit'])->name('editWorks');

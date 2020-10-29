@@ -3,21 +3,22 @@
 
     <h1 class="titlePage">CADASTRO DE USUÁRIOS</h1>
     <hr/>
-    <form class="formsProject" action="{{route('saveUser')}}" method="POST" autocomplete="off" enctype="multipart/form-data">
+    <form class="formsProject" action="{{route('saveUser')}}" method="POST" autocomplete="off"
+          enctype="multipart/form-data">
         @csrf
         <div class="form-row">
             <div class="form-group col-md-4">
-                <label for="nome">Nome</label>
-                <input type="text" class="form-control" name="nome">
+                <label for="nome">Login</label>
+                <input type="text" class="form-control" name="nome" required>
             </div>
             <div class="form-group col-md-4">
                 <label for="text">Nome Completo </label>
-                <input type="text" class="form-control" name="nomecompleto">
+                <input type="text" class="form-control" name="nomecompleto" required>
             </div>
 
             <div class="form-group col-md-2">
                 <label for="nome">Senha</label>
-                <input type="password" class="form-control" name="senha">
+                <input type="password" class="form-control" name="senha" required>
             </div>
 
         </div>

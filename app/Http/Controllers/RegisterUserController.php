@@ -34,7 +34,7 @@ class RegisterUserController extends Controller
 
         registerUser::create($user);
 
-        return redirect()->action([RegisterUserController::class, 'index']);
+        return redirect('/');
 
     }
 

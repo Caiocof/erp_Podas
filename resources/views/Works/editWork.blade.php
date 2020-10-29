@@ -1,8 +1,13 @@
 @extends('master')
 @section('content')
 
+
     <h1 class="titlePage">CADASTRO DE FUNCIONÁRIOS</h1>
     <hr/>
+
+    <?php
+        var_dump($work->TFUNC_NOME);
+    ?>
     <form class="formsProject" action="{{route('saveWorks')}}" method="POST" autocomplete="off"
           enctype="multipart/form-data">
     @csrf
@@ -15,7 +20,7 @@
             </div>
             <div class="form-group col-md-11">
                 <label for="nome">Nome</label>
-                <input type="text" class="form-control" name="nome">
+                <input type="text" class="form-control" name="nome" value="{{$work->TFUNC_NOME}}" required>
             </div>
         </div>
 
@@ -75,10 +80,13 @@
                 <label for="inputFuncao">Função</label>
                 <select id="inputFuncao" class="form-control" name="inputFuncao">
                     <option selected>Escolher...</option>
-                    <!--                    --><?php
-                    //                    foreach ($funcaoDAO->read() as $funcoes) {
-                    //                        echo "<option value='{$funcoes['TFUNCAO_ID_PK']}'> {$funcoes['TFUNCAO_NOME']} </option>";
-                    //                    } ?>
+{{--                    <?php--}}
+{{--                    foreach ($occupations as $occupation) {--}}
+{{--                    ?>--}}
+
+{{--                    <option value='{{$occupation->TFUNCAO_ID_PK ?? ''}}'>{{$occupation->TFUNCAO_NOME ?? ''}}</option>--}}
+{{--                    <?php--}}
+{{--                    } ?>--}}
                 </select>
             </div>
             <div class="form-group col-md-3">
@@ -94,12 +102,13 @@
                 <label for="inputEquipe">Equipe</label>
                 <select id="inputEquipe" class="form-control" name="inputEquipe">
                     <option selected>Escolher...</option>
-                    <!--                    --><?php
-                    //                    foreach ($equipeDAO->read() as $equipe) {
-                    //                        echo "<option value='{$equipe['TEQUIPE_ID_PK']}'> {$equipe['TEQUIPE_NOME']} </option>";
-                    //                    } ?>
+{{--                    <?php--}}
+{{--                    foreach ($workTeams as $workTeam) {--}}
+{{--                    ?>--}}
+{{--                    <option value='{{$workTeam->TEQUIPE_ID_PK ?? ''}}'> {{$workTeam->TEQUIPE_NOME ?? ''}} </option>--}}
+{{--                    <?php--}}
+{{--                    } ?>--}}
                 </select>
-
 
             </div>
         </div>
@@ -140,11 +149,32 @@
             </div>
         </div>
 
-        <div class="bottuns">
+        <!-- DATA DEMISSION -->
+        <div class="col-sm-6">
+            <div class="card-body">
+                <div class="card border-danger mb-10" style="max-width: 35rem;">
+                    <div class="card-header">Dados para Demissão</div>
+                    <div class="card-body text-danger">
 
-            <button type="submit" class="btn btn-primary">Salvar</button>
-            <a href="{{url('/')}}" class="btn btn-warning">Voltar</a>
-        </div>
+                        <div class="form-group col-md-5">
+                            <label for="text">Data Demissão </label>
+                            <input type="date" class="form-control" name="datademissao"
+                                   value="">
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="text">Motivo Demissão </label>
+                            <input type="text" class="form-control" name="motivodemissao"
+                                   value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottuns">
+
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <a href="{{url('/')}}" class="btn btn-warning">Voltar</a>
+            </div>
 
     </form>
 

@@ -3,6 +3,18 @@
     padding: 0;
 }
 
+body {
+    background-color: #F7F7F7;
+}
+
+.container {
+    margin-top: 30px;
+    background: #fff;
+    padding-bottom: 20px;
+    border: 1px solid #e6e9ed;
+    box-shadow: 1px 1px 5px black;
+}
+
 .cabecalho {
     background-color: #10834b;
     text-align: center;
@@ -10,18 +22,13 @@
     box-shadow: 1px 6px 8px black;
 }
 
-
 footer {
-    background: #e3f2fd;
-    width: 100%;
-    height: 70px;
-    bottom: 0;
-    left: 0;
+    background: #fff;
+    padding: 10px 20px;
+    display: block;
+    margin-top: 50px;
     text-align: center;
-    padding-top: 50px;
-    color: black;
-    font-weight: bold;
-    box-shadow: 1px -5px 8px black;
+    border-top: solid 1px #acaaaa;
 }
 
 .navbar {
