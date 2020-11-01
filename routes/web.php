@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterUserController;
 use App\Http\Controllers\WorksController;
+use App\Http\Controllers\WorkTeamController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,16 @@ Route::post('/cadastraUsuario/store', [RegisterUserController::class, 'store'])-
 
 
 //WORKS
+//list
 Route::get('/listaFuncionario', [WorksController::class, 'index'])->name('listWorks');
+//create
 Route::get('/cadastraFuncionario', [WorksController::class, 'create'])->name('registerWorks');
 Route::post('/cadastraFuncionario/store', [WorksController::class, 'store'])->name('saveWorks');
-Route::get('/editarFuncionario/{id}', [WorksController::class, 'edit'])->name('editWorks');
+//edit and drop
+Route::get('/editarFuncionario/{id}/edit', [WorksController::class, 'edit'])->name('editWorks');
+Route::put('/editarFuncionario/update/{id}', [WorksController::class, 'update'])->name('saveEditWorks');
+Route::delete('/deleteFuncionario/{id}', [WorksController::class, 'destroy'])->name('deleteWorks');
+
+//WORKTEAMS
+//list
+Route::get('listaEquipes', [WorkTeamController::class, 'index'])->name('listTeams');

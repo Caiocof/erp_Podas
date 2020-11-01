@@ -28,7 +28,36 @@
             </div>
             <div class="form-group col-md-1">
                 <label for="nome">Estado</label>
-                <input type="text" class="form-control" name="estado">
+                <select name="estado">
+                    <option selected value="BA">BA</option>
+                    <option value="AC">AC</option>
+                    <option value="AL">AL</option>
+                    <option value="AP">AP</option>
+                    <option value="AM">AM</option>
+                    <option value="CE">CE</option>
+                    <option value="DF">DF</option>
+                    <option value="ES">ES</option>
+                    <option value="GO">GO</option>
+                    <option value="MA">MA</option>
+                    <option value="MT">MT</option>
+                    <option value="MS">MS</option>
+                    <option value="MG">MG</option>
+                    <option value="PA">PA</option>
+                    <option value="PB">PB</option>
+                    <option value="PR">PR</option>
+                    <option value="PE">PE</option>
+                    <option value="PI">PI</option>
+                    <option value="PJ">RJ</option>
+                    <option value="RN">RN</option>
+                    <option value="RS">RS</option>
+                    <option value="RO">RO</option>
+                    <option value="RR">RR</option>
+                    <option value="SC">SC</option>
+                    <option value="SP">SP</option>
+                    <option value="SE">SE</option>
+                    <option value="TO">TO</option>
+                </select>
+
             </div>
             <div class="form-group col-md-4">
                 <label for="text">Endereço </label>
@@ -72,17 +101,13 @@
 
         <!-- CONTRACTING DATA -->
         <div class="form-row">
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-3">
                 <label for="inputFuncao">Função</label>
                 <select id="inputFuncao" class="form-control" name="inputFuncao">
                     <option selected>Escolher...</option>
-                    <?php
-                    foreach ($occupations as $occupation) {
-                    ?>
-
-                    <option value='{{$occupation->TFUNCAO_ID_PK ?? ''}}'>{{$occupation->TFUNCAO_NOME ?? ''}}</option>
-                    <?php
-                    } ?>
+                    @foreach ($occupations as $occupation)
+                        <option value='{{$occupation->TFUNCAO_ID_PK ?? ''}}'>{{$occupation->TFUNCAO_NOME ?? ''}}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="form-group col-md-3">
@@ -94,16 +119,13 @@
                 <input type="date" class="form-control" name="dataadmin">
 
             </div>
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-3">
                 <label for="inputEquipe">Equipe</label>
                 <select id="inputEquipe" class="form-control" name="inputEquipe">
                     <option selected>Escolher...</option>
-                    <?php
-                    foreach ($workTeams as $workTeam) {
-                    ?>
-                    <option value='{{$workTeam->TEQUIPE_ID_PK ?? ''}}'> {{$workTeam->TEQUIPE_NOME ?? ''}} </option>
-                    <?php
-                    } ?>
+                    @foreach($workTeams as $workTeam)
+                        <option value='{{$workTeam->TEQUIPE_ID_PK ?? ''}}'> {{$workTeam->TEQUIPE_NOME ?? ''}} </option>
+                    @endforeach
                 </select>
 
             </div>
@@ -148,9 +170,10 @@
         <div class="bottuns">
 
             <button type="submit" class="btn btn-primary">Salvar</button>
-            <a href="{{url('/')}}" class="btn btn-warning">Voltar</a>
+            <a href="{{route('listWorks')}}" class="btn btn-warning">Voltar</a>
         </div>
 
     </form>
+    @stack('javascript')
 
 @endsection

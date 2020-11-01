@@ -19,30 +19,36 @@
         </tr>
         </thead>
         <tbody>
-        <?php
-        if (!empty($works)){
-        foreach ($works as $work) {
-        ?>
-        <tr>
-            <th scope='row'>{{$work->TFUNC_ID}}</th>
-            <td>{{$work->TFUNC_NOME}}</td>
-            <td>{{$work->TFUNC_CPF}}</td>
-            <td>{{$work->TFUNC_CEL}}</td>
-            <td>
-                <a class='btn btn-primary' role='button'
-                   href='{{route('editWorks', ['id' => $work->TFUNC_ID])}}'>Editar</a>
-                <a class='btn btn-danger' role='button'
-                   href=''
-                   data-confirm=''>Apagar</a>
-            </td>
-        </tr>
 
-        <?php
-        }
-        }
-        ?>
+        @if(!empty($works))
+            @foreach($works as $work)
+                <tr>
+                    <th scope='row'>{{$work->TFUNC_ID}}</th>
+                    <td>{{$work->TFUNC_NOME}}</td>
+                    <td>{{$work->TFUNC_CPF}}</td>
+                    <td>{{$work->TFUNC_CEL}}</td>
+                    <td>
+                        <div class="btn-toolbar" role="toolbar">
+                            <div div class="btn-group mr-2" role="group">
+                                <a class='btn btn-primary' role='button'
+                                   href='{{route('editWorks', ['id' => $work->TFUNC_ID])}}'>Editar</a>
+                            </div>
+
+                            <form action="{{route('deleteWorks',['id' => $work->TFUNC_ID])}}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class='btn btn-danger' role='button'
+                                        data-confirm=''>Apagar
+                                </button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            @endforeach
+        @endif
         </tbody>
         <tfoot>
         </tfoot>
     </table>
 @endsection
+

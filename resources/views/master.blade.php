@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
+
     <title>ERP Controle de Podas</title>
 </head>
 
@@ -19,7 +20,8 @@
         <a class="navbar-brand" href="{{url('/')}}">
             <img src="{{asset('image/logopodas.png')}}" width="40" class="d-inline-block align-top" alt="">
         </a>
-        <button class="navbar-toggler  navbar-light" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+        <button class="navbar-toggler  navbar-light" type="button" data-toggle="collapse"
+                data-target="#conteudoNavbarSuportado"
                 aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:#fff; font-size:28px;"></i></span>
         </button>
@@ -39,7 +41,7 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{{route('listWorks')}}">Funcionários</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Equipes</a>
+                        <a class="dropdown-item" href="{{route('listTeams')}}">Equipes</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">LT's</a>
                         <div class="dropdown-divider"></div>
@@ -96,7 +98,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
         integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
-
+<script src="{{asset('js/app.js')}}"></script>
 <footer>
     CaioCof © 2020 - <?= date('Y'); ?>
 </footer>
