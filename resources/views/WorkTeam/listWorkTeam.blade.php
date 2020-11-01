@@ -1,7 +1,15 @@
 @extends('master')
 @section('content')
 
-    <table class="table">
+    <h1 class="titlePage">LISTA DE EQUIPES</h1>
+    <hr/>
+    <div class="subMenu">
+        <a class="btn btn-danger" href="{{url('/')}}" role="button">Voltar</a>
+        <a class="btn btn-success" href="{{route('registerTeams')}}" role="button">Cadastrar Nova</a>
+
+    </div>
+
+    <table class="table table-striped">
         <thead>
         <tr>
             <th>Código</th>
@@ -12,24 +20,37 @@
         </tr>
         </thead>
         <tbody>
-<!--        --><?php
-//        foreach ($equipeDAO->read() as $equipe) {
-//            //  var_dump($equipe);
-//            echo "
-//                    <tr>
-//                    <th scope='row'>{$equipe['TEQUIPE_ID_PK']}</th>
-//                    <td>{$equipe['TEQUIPE_NOME']}</td>
-//                    <td>{$equipe['TEQUIPE_RESP']}</td>
-//                    <td>{$equipe['TEQUIPE_VLR_SERV']}</td>
-//                    <td>
-//                    <a class='btn btn-primary btn-sm' role='button' href='editaRequipes.php?id={$equipe['TEQUIPE_ID_PK']}' >Editar</a>
-//                    <a class='btn btn-danger btn-sm' role='button' href='../recurso/delet/delEquipe.php?id={$equipe['TEQUIPE_ID_PK']}' data-confirm=''>Apagar</a>
-//                    <a class='btn btn-info btn-sm' role='button' href='cadastroProducao.php?id={$equipe['TEQUIPE_ID_PK']}' >Lançar Produção</a>
-//                    </td>
-//                    </tr>
-//                    ";
-//        }
-//        ?>
+
+        @foreach($teams as $team)
+            @if($team->TEQUIPE_NOME != 'NAO DEFINIDO')
+                <tr>
+                    <th scope='row'>{{$team->TEQUIPE_ID_PK}}</th>
+                    <td>{{$team->TEQUIPE_NOME}}</td>
+                    <td>{{$team->TEQUIPE_RESP}}</td>
+                    <td>{{$team->TEQUIPE_VLR_SERV}}</td>
+                    <td>
+                        <div class="btn-toolbar" role="toolbar">
+                            <div div class="btn-group mr-2" role="group">
+                                <a class='btn btn-primary btn-sm' role='button'
+                                   href='{{route('editTeams',['id' =>$team->TEQUIPE_ID_PK])}}'>Editar</a>
+                            </div>
+                            <div div class="btn-group mr-2" role="group">
+                                <form action="{{route('deleteTeams',['id' => $team->TEQUIPE_ID_PK])}}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class='btn btn-danger' role='button' data-confirm=''>
+                                        Apagar
+                                    </button>
+                                </form>
+                            </div>
+                            <a class='btn btn-info btn-sm' role='button'
+                               href='{{route('registerProduction', ['id' => $team->TEQUIPE_ID_PK])}}'>
+                                Lançar Produção</a>
+                        </div>
+                    </td>
+                </tr>
+            @endif
+        @endforeach
 
         </tbody>
         <tfoot>

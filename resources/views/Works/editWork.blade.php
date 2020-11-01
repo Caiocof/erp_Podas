@@ -2,7 +2,7 @@
 @section('content')
 
 
-    <h1 class="titlePage">CADASTRO DE FUNCIONÁRIOS</h1>
+    <h1 class="titlePage">EQUITAR FUNCIONÁRIOS</h1>
     <hr/>
 
     <form class="formsProject" action="{{route('saveEditWorks',['id' => $work->TFUNC_ID])}}" method="POST"
