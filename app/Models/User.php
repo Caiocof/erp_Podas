@@ -11,33 +11,11 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    protected $table = 'tlogin';
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    protected $fillable = ['tlogin_nome', 'tlogin_nome_completo', 'tlogin_pass',];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    protected $hidden = ['tlogin_pass',];
+
+    protected $primaryKey = 'tlogin_id_pk';
 }

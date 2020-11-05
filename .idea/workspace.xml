@@ -19,15 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50952a33-232a-41d7-8088-1903f1c31731" name="Default Changelist" comment="create workteam">
-      <change afterPath="$PROJECT_DIR$/resources/views/WorkTeam/editWorkTeam.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/WorkTeam/registerProduction.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/WorkTeam/registerWorkTeam.blade.php" afterDir="false" />
+    <list default="true" id="50952a33-232a-41d7-8088-1903f1c31731" name="Default Changelist" comment="update and delete for teams">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/logoLogin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/User/formLogin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/WorkTeam/listWorkTeam.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/WorkTeam/listWorkTeam.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Works/editWork.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Works/editWork.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/registerUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/registerUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,8 +41,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -169,7 +168,7 @@
     <property name="ChangesTree.GroupingKeys" value="" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/WorkTeam" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/image" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -182,16 +181,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\public\image" />
+      <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\WorkTeam" />
+      <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\Works" />
+      <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\WorkTeam" />
       <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\Works" />
       <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\User" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\WorkTeam" />
-      <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\Works" />
-      <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\public" />
-      <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\public\image" />
     </key>
   </component>
   <component name="RunManager">
@@ -216,7 +215,8 @@
       <workItem from="1604151131168" duration="2255000" />
       <workItem from="1604228837973" duration="5769000" />
       <workItem from="1604241203649" duration="7621000" />
-      <workItem from="1604252648679" duration="6005000" />
+      <workItem from="1604252648679" duration="6534000" />
+      <workItem from="1604604298338" duration="2777000" />
     </task>
     <task id="LOCAL-00001" summary="create project">
       <created>1603828836116</created>
@@ -246,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604252707250</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update and delete for teams">
+      <created>1604259021851</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604259021851</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +276,8 @@
     <MESSAGE value="create user, list works" />
     <MESSAGE value="criated works" />
     <MESSAGE value="create workteam" />
-    <option name="LAST_COMMIT_MESSAGE" value="create workteam" />
+    <MESSAGE value="update and delete for teams" />
+    <option name="LAST_COMMIT_MESSAGE" value="update and delete for teams" />
   </component>
   <component name="WindowStateProjectService">
     <state x="549" y="154" key="FileChooserDialogImpl" timestamp="1603828782198">
@@ -280,18 +288,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="647" y="310" key="Github.ShareDialog/0.0.1536.824/-1366.303.1366.728@0.0.1536.824" timestamp="1603828970387" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1604253994110">
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1604604437994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824/-1366.303.1366.728@0.0.1536.824" timestamp="1604253994110" />
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824/-1366.303.1366.728@0.0.1536.824" timestamp="1604604437994" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1603909845484">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824/-1366.303.1366.728@0.0.1536.824" timestamp="1603909845484" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1604252755787">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1604259279159">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1366.303.1366.728@0.0.1536.824" timestamp="1604252755787" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1366.303.1366.728@0.0.1536.824" timestamp="1604259279159" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604252667212">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

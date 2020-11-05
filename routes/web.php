@@ -5,6 +5,7 @@ use App\Http\Controllers\RegisterUserController;
 use App\Http\Controllers\WorksController;
 use App\Http\Controllers\WorkTeamController;
 use App\Http\Controllers\ProductionController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,13 +18,17 @@ use App\Http\Controllers\ProductionController;
 |
 */
 
-Route::get('/', function () {
-    return view('master');
-});
 
 //USER
 Route::get('/cadastraUsuario', [RegisterUserController::class, 'index'])->name('regiterUser');
 Route::post('/cadastraUsuario/store', [RegisterUserController::class, 'store'])->name('saveUser');
+
+
+//LOGIN
+Route::get('/', [AuthController::class, 'dashboard'])->name('dashboard');
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::get('/logou', [AuthController::class, 'logout'])->name('logout');
+Route::post('/login/do', [AuthController::class, 'login'])->name('login.do');
 
 
 //WORKS

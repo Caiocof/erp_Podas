@@ -11,4 +11,5 @@ class registerUser extends Model
 
     protected $table = 'tlogin';
     protected $fillable = ['tlogin_nome', 'tlogin_nome_completo', 'tlogin_pass'];
+    protected $primaryKey = 'tlogin_id_pk';
 }
