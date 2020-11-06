@@ -25,12 +25,12 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $credentials = [
-            'tlogin_nome' => $request->nome,
-            'tlogin_pass' => $request->senha
+            'email' => $request->email,
+            'password' => $request->pass
         ];
 
         if (Auth::attempt($credentials)) {
-            return redirect()->route('/');
+            return redirect()->route('dashboard');
         }
 
         return redirect()->back()->withInput()->withErrors(['Os dados informados não conferem!']);
@@ -41,7 +41,7 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect()->route('/');
+        return redirect()->route('dashboard');
 
     }
 }

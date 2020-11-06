@@ -2,19 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\registerUser;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterUserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        return view('User.registerUser');
+        if (Auth::check() === true) {
+            return view('User.registerUser');
+        }
+
+        return redirect()->route('login');
+
     }
 
 
@@ -27,24 +29,24 @@ class RegisterUserController extends Controller
     public function store(Request $request)
     {
         $user = [
-            'tlogin_nome' => $request->nome,
-            'tlogin_nome_completo' => $request->nomecompleto,
-            'tlogin_pass' => bcrypt($request->senha)
+            'name' => $request->nome,
+            'email' => $request->email,
+            'password' => bcrypt($request->senha)
         ];
 
-        registerUser::create($user);
+        User::create($user);
 
-        return redirect('/');
+        return redirect()->route('dashboard');
 
     }
 
     /**
      * Display the specified resource.
      *
-     * @param \App\Models\registerUser $registerUser
+     * @param \App\Models\User $User
      * @return \Illuminate\Http\Response
      */
-    public function show(registerUser $registerUser)
+    public function show(User $User)
     {
         //
     }
@@ -52,10 +54,10 @@ class RegisterUserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \App\Models\registerUser $registerUser
+     * @param \App\Models\User $rUser
      * @return \Illuminate\Http\Response
      */
-    public function edit(registerUser $registerUser)
+    public function edit(User $User)
     {
         //
     }
@@ -64,10 +66,10 @@ class RegisterUserController extends Controller
      * Update the specified resource in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @param \App\Models\registerUser $registerUser
+     * @param \App\Models\User $User
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, registerUser $registerUser)
+    public function update(Request $request, User $User)
     {
         //
     }
@@ -75,10 +77,10 @@ class RegisterUserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param \App\Models\registerUser $registerUser
+     * @param \App\Models\User $rUser
      * @return \Illuminate\Http\Response
      */
-    public function destroy(registerUser $registerUser)
+    public function destroy(User $User)
     {
         //
     }

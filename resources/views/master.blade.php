@@ -17,7 +17,7 @@
     <h1>ERP PODAS</h1>
     <h2>Sistema de Gerenciamento</h2>
     <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="{{url('/')}}">
+        <a class="navbar-brand" href="{{route('dashboard')}}">
             <img src="{{asset('image/logopodas.png')}}" width="40" class="d-inline-block align-top" alt="">
         </a>
         <button class="navbar-toggler  navbar-light" type="button" data-toggle="collapse"
@@ -29,7 +29,7 @@
         <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active menuMaster">
-                    <a class="nav-link" href="{{url('/')}}">Inicio </a>
+                    <a class="nav-link" href="{{route('dashboard')}}">Inicio </a>
                 </li>
                 <li class="nav-item dropdown menuMaster">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -74,7 +74,9 @@
                         <a class="dropdown-item" href="#">...</a>
                     </div>
                 </li>
-
+                <li class="nav-item active menuMaster">
+                    <a class="nav-link" href="{{route('logout')}}">Sair </a>
+                </li>
             </ul>
         </div>
     </nav>

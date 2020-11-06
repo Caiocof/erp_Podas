@@ -12,8 +12,8 @@
                 <input type="text" class="form-control" name="nome" required>
             </div>
             <div class="form-group col-md-4">
-                <label for="text">Nome Completo </label>
-                <input type="text" class="form-control" name="nomecompleto" required>
+                <label for="text">Email</label>
+                <input type="email" class="form-control" name="email" required>
             </div>
 
             <div class="form-group col-md-2">
