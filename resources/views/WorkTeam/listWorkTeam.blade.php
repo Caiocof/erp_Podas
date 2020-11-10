@@ -44,7 +44,7 @@
                                 </form>
                             </div>
                             <a class='btn btn-info btn-sm' role='button'
-                               href='{{route('registerProduction', ['id' => $team->TEQUIPE_ID_PK])}}'>
+                               href='{{route('lauchesProdution', ['id' => $team->TEQUIPE_ID_PK])}}'>
                                 Lançar Produção</a>
                         </div>
                     </td>

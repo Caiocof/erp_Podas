@@ -4,7 +4,7 @@
     <h1 class="titlePage">LISTA DE FUNCIONARIOS</h1>
     <hr/>
     <div class="subMenu">
-        <a class="btn btn-danger" href="{{url('/')}}" role="button">Voltar</a>
+        <a class="btn btn-danger" href="{{route('dashboard')}}" role="button">Voltar</a>
         <a class="btn btn-success" href="{{route('registerWorks')}}" role="button">Cadastrar Novo</a>
 
     </div>

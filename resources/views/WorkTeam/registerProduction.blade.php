@@ -1,22 +1,31 @@
 @extends('master')
 @section('content')
 
+    <!-- script calcula total m2-->
+    <script type="text/javascript">
+        function multiplica() {
+            num1 = document.getElementById("comp").value;
+            num2 = document.getElementById("larg").value;
+            document.getElementById("m2").value = num1 * num2;
+        }
+    </script>
 
-    <h1 class="titlePage">CADASTRO DE EQUIPES</h1>
+    <h1 class="titlePage">LAÇAMENTO DE PRODUÇÕES</h1>
     <hr/>
-    <form class="formsProject" action="{{route('')}}" method="POST" autocomplete="off"
+
+    <form class="formsProject" action="{{route('uploadProdution')}}" method="POST" autocomplete="off"
           enctype="multipart/form-data">
         @csrf
 
 
-{{--        <input type="hidden" name="cid" value="<?= feedForm($id, $equipe, 'TEQUIPE_ID_PK') ?>">--}}
+        <input type="hidden" name="Teamid" value="{{$id}}">
         <div class="form-row">
-            <div class="form-group col-md-1">
-                <label for="text">Item</label>
-                <input type="text" class="form-control" name="item" required>
-            </div>
             <div class="form-group col-md-2">
-                <label for="nome">data</label>
+                <label for="item">Item</label>
+                <input type="number" class="form-control" name="item" required>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="dataprod">data</label>
                 <input type="date" class="form-control" name="dataprod" required>
             </div>
 
@@ -25,46 +34,53 @@
                 <label for="inputRegiao">Lt</label>
                 <select id="inputRegiao" class="form-control" name="inputRegiao" required>
                     <option selected>Escolher...</option>
-<!--                    --><?php
-//                    foreach ($ltDAO->read() as $lts) {
-//                        echo "<option value='{$lts['TLT_ID_PK']}'> {$lts['TLT_NOME']} -  {$lts['TLT_LOCAL']} - {$lts['TLT_SIGLA']}</option>";
-//                    } ?>
+
+                    @foreach ($lts as $lt)
+                        <option value='{{$lt->TLT_ID_PK}}'>
+                            {{$lt->TLT_NOME}} - {{$lt->TLT_LOCAL}} - {{$lt->TLT_SIGLA}}
+                        </option>
+                    @endforeach
                 </select>
             </div>
             <div class="form-row">
-                <div class="form-group col-md-1">
+                <div class="form-group col-md-3">
                     <label for="text">Vão </label>
-                    <input type="text" class="form-control" name="vao" required>
+                    <input type="number" class="form-control" name="vao" required>
                 </div>
-                <div class="form-group col-md-1">
-                    <label for="nome">Comprimento</label>
-                    <input type="text" class="form-control" name="comp" id="comp" required>
+                <div class="form-group col-md-3">
+                    <label for="comp">Comprimento</label>
+                    <input type="number" class="form-control" name="comp" id="comp" required>
                 </div>
-                <div class="form-group col-md-1">
-                    <label for="nome">Largura</label>
-                    <input type="text" class="form-control" name="larg" id="larg" onChange="multiplica()" required>
+                <div class="form-group col-md-3">
+                    <label for="larg">Largura</label>
+                    <input type="number" class="form-control" name="larg" id="larg" onChange="multiplica()" required>
                 </div>
 
-                <div class="form-group col-md-2">
-                    <label for="nome">Total M2</label>
-                    <input type="text" class="form-control" name="result" id="m2" disabled>
+                <div class="form-group col-md-3">
+                    <label for="result">Total M2</label>
+                    <input type="number" class="form-control" name="result" id="m2" disabled>
                 </div>
-                <div class="form-group col-md-5">
+
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-13">
                     <label for="text">Justificativa</label>
-                    <input type="text" class="form-control" name="justificativa">
+                    <textarea class="form-control" name="justificativa" id="text" cols="113" rows="3"></textarea>
+
                 </div>
             </div>
 
+            <div class="form-row imgForm">
+                <div class="form-group col-md-6">
+                    <label for="nome">Imagem Antes</label>
+                    <input type="file" class="form-control" name="img_antes" required>
+                </div>
 
-            <div class="form-group col-md-5">
-                <label for="nome">Imagem Antes</label>
-                <input type="file" class="form-control" name="img_antes" required>
-            </div>
 
-
-            <div class="form-group col-md-5">
-                <label for="nome">Imagem Depois</label>
-                <input type="file" class="form-control" name="img_depois" required>
+                <div class="form-group col-md-6">
+                    <label for="nome">Imagem Depois</label>
+                    <input type="file" class="form-control" name="img_depois" required>
+                </div>
             </div>
         </div>
 
