@@ -45,7 +45,7 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{{route('listLts')}}">LT's</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Regiões</a>
+                        <a class="dropdown-item" href="{{route('listRegions')}}">Regiões</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown menuMaster">

@@ -174,6 +174,5 @@
         </div>
 
     </form>
-    @stack('javascript')
 
 @endsection

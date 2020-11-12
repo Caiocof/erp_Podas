@@ -51,7 +51,10 @@ thead {
     letter-spacing: 0px;
 }
 
-.imgForm{
+.imgForm {
 
     margin: 10px 40px auto;
+}
+.table-region{
+    padding-left: 50px;
 }
