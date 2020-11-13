@@ -51,19 +51,6 @@
                 <li class="nav-item dropdown menuMaster">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Lançamentos
-                    </a>
-                    <div class="dropdown-menu subItens" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Produção Diaria</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">...</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">...</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown menuMaster">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Relatórios
                     </a>
                     <div class="dropdown-menu subItens" aria-labelledby="navbarDropdown">

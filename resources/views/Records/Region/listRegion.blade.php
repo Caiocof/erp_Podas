@@ -5,25 +5,25 @@
     <hr/>
     <div class="subMenu">
         <a class="btn btn-danger" href="{{route('dashboard')}}" role="button">Voltar</a>
-        <a class="btn btn-success" href="" role="button">Cadastrar Novo</a>
+        <a class="btn btn-success" href="{{route('registerRegions')}}" role="button">Cadastrar Novo</a>
 
     </div>
 
-    <table class="table table-striped table-region">
-        <thead>
+    <table class="table table-striped">
+        <thead class="table-region">
         <tr>
             <th>Código</th>
             <th>Nome</th>
             <th>Ação</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody class="table-region">
         @foreach ($regions as $region)
             <tr>
                 <th scope='row'>{{$region->TREGIAO_ID_PK}}</th>
                 <td>{{$region->TREGIAO_NOME}}</td>
                 <td>
-                    <div class="btn-toolbar" role="toolbar">
+                    <div class="btn-toolbar btn-region" role="toolbar">
                         <div div class="btn-group mr-2" role="group">
                             <a class='btn btn-primary btn-sm' role='button'
                                href='{{route('editRegions',['id' => $region->TREGIAO_ID_PK])}}'>Editar</a>

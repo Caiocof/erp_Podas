@@ -12,7 +12,7 @@ class RegisterUserController extends Controller
     public function index()
     {
         if (Auth::check() === true) {
-            return view('User.registerUser');
+            return view('Records.User.registerUser');
         }
 
         return redirect()->route('login');

@@ -19,17 +19,31 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50952a33-232a-41d7-8088-1903f1c31731" name="Default Changelist" comment="Lts">
-      <change afterPath="$PROJECT_DIR$/resources/views/Lts/registerLt.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Region/editRegion.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Region/listRegion.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Region/registerRegion.blade.php" afterDir="false" />
+    <list default="true" id="50952a33-232a-41d7-8088-1903f1c31731" name="Default Changelist" comment="Region">
+      <change afterPath="$PROJECT_DIR$/resources/views/Records/Region/editRegion.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Records/Region/registerRegion.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RegisterUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Records/RegisterUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Lts/listLt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Lts/listLt.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Works/registerWork.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Works/registerWork.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Lts/editLt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Records/Lts/editLt.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Lts/listLt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Records/Lts/listLt.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Lts/registerLt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Records/Lts/registerLt.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Region/editRegion.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Region/listRegion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Records/Region/listRegion.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Region/registerRegion.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/User/formLogin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Records/User/formLogin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/User/registerUser.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Records/User/registerUser.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/WorkTeam/editWorkTeam.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Records/WorkTeam/editWorkTeam.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/WorkTeam/listWorkTeam.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Records/WorkTeam/listWorkTeam.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/WorkTeam/registerProduction.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Records/WorkTeam/registerProduction.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/WorkTeam/registerWorkTeam.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Records/WorkTeam/registerWorkTeam.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Works/editWork.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Records/Works/editWork.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Works/listWorks.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Records/Works/listWorks.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Works/registerWork.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Records/Works/registerWork.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,6 +174,10 @@
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jTCDQHCW2W8O1MQlEkaGNnjzBP" />
@@ -185,18 +203,18 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\Region" />
-      <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\Lts" />
-      <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\WorkTeam" />
-      <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\Works" />
-      <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\User" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\Lts" />
       <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\Works" />
       <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\app\Http\Controllers" />
       <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\public\image" />
+      <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\WorkTeam" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\app\Http\Controllers\Records" />
+      <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\Records" />
+      <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\Region" />
+      <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\Lts" />
       <recent name="E:\system\xampp\htdocs\WORKES\ProjLara\erp_Podas\resources\views\WorkTeam" />
     </key>
   </component>
@@ -227,7 +245,8 @@
       <workItem from="1604689317456" duration="3903000" />
       <workItem from="1604924900304" duration="4413000" />
       <workItem from="1605030168860" duration="7042000" />
-      <workItem from="1605207673226" duration="5271000" />
+      <workItem from="1605207673226" duration="5349000" />
+      <workItem from="1605282584082" duration="3624000" />
     </task>
     <task id="LOCAL-00001" summary="create project">
       <created>1603828836116</created>
@@ -285,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605037080107</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Region">
+      <created>1605213010613</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1605213010613</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +338,8 @@
     <MESSAGE value="login" />
     <MESSAGE value="auth login" />
     <MESSAGE value="Lts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lts" />
+    <MESSAGE value="Region" />
+    <option name="LAST_COMMIT_MESSAGE" value="Region" />
   </component>
   <component name="WindowStateProjectService">
     <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1605036087978">
@@ -335,18 +362,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="647" y="310" key="Github.ShareDialog/0.0.1536.824/-1366.303.1366.728@0.0.1536.824" timestamp="1603828970387" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1605033965759">
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1605284904050">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824/-1366.303.1366.728@0.0.1536.824" timestamp="1605033965759" />
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824/-1366.303.1366.728@0.0.1536.824" timestamp="1605284904050" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1605034249786">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824/-1366.303.1366.728@0.0.1536.824" timestamp="1605034249786" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605037178312">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605213054191">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1366.303.1366.728@0.0.1536.824" timestamp="1605037178312" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1366.303.1366.728@0.0.1536.824" timestamp="1605213054191" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604252667212">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -360,7 +387,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/LtController.php</url>
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Records/LtController.php</url>
           <line>4</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>

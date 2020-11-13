@@ -19,7 +19,7 @@ class AuthController extends Controller
 
     public function showLoginForm()
     {
-        return view('User.formLogin');
+        return view('Records.User.formLogin');
     }
 
     public function login(Request $request)

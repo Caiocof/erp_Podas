@@ -55,6 +55,14 @@ thead {
 
     margin: 10px 40px auto;
 }
-.table-region{
-    padding-left: 50px;
+
+.table-region {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.btn-region {
+    justify-content: center;
+    text-align: center;
 }
