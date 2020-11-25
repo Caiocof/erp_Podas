@@ -5,6 +5,12 @@
     <h1 class="titlePage">EQUITAR FUNCIONÁRIOS</h1>
     <hr/>
 
+    @foreach($errors->all() as $error)
+        <div class="alert alert-danger" role="alert">
+            {{$error}}
+        </div>
+    @endforeach
+
     <form class="formsProject" action="{{route('saveEditWorks',['id' => $work->TFUNC_ID])}}" method="POST"
           autocomplete="off"
           enctype="multipart/form-data">
@@ -19,7 +25,7 @@
             </div>
             <div class="form-group col-md-11">
                 <label for="nome">Nome</label>
-                <input type="text" class="form-control" name="nome" value="{{$work->TFUNC_NOME ?? ''}}" required>
+                <input type="text" class="form-control" name="nome" value="{{$work->TFUNC_NOME ?? ''}}">
             </div>
         </div>
 

@@ -4,6 +4,13 @@
 
     <h1 class="titlePage">CADASTRO DE EQUIPES</h1>
     <hr/>
+
+    @foreach($errors->all() as $error)
+        <div class="alert alert-danger" role="alert">
+            {{$error}}
+        </div>
+    @endforeach
+
     <form class="formsProject" action="{{route('saveTeams')}}" method="POST" autocomplete="off"
           enctype="multipart/form-data">
         @csrf
@@ -12,19 +19,19 @@
         <div class="form-row">
             <div class="form-group col-md-12">
                 <label for="nome">Nome</label>
-                <input type="text" class="form-control" name="nome" required>
+                <input type="text" class="form-control" name="nome" value="{{old('nome')}}">
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-7">
                 <label for="text">Responsável </label>
-                <input type="text" class="form-control" name="responsavel" required>
+                <input type="text" class="form-control" name="responsavel" value="{{old('responsavel')}}">
             </div>
 
             <div class="form-group col-md-5">
                 <label for="nome">Valor Serviço</label>
-                <input type="number" class="form-control" name="valorservico" required>
+                <input type="number" class="form-control" name="valorservico" value="{{old('valorservico')}}">
             </div>
         </div>
 

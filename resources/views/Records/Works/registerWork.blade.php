@@ -4,6 +4,13 @@
 
     <h1 class="titlePage">CADASTRO DE FUNCIONÁRIOS</h1>
     <hr/>
+
+    @foreach($errors->all() as $error)
+        <div class="alert alert-danger" role="alert">
+            {{$error}}
+        </div>
+    @endforeach
+
     <form class="formsProject" action="{{route('saveWorks')}}" method="POST" autocomplete="off"
           enctype="multipart/form-data">
     @csrf
@@ -12,11 +19,11 @@
         <div class="form-row">
             <div class="form-group col-md-1">
                 <label for="text">Codigo </label>
-                <input type="text" class="form-control" name="cod">
+                <input type="text" class="form-control" name="cod" value="{{old('cod')}}">
             </div>
             <div class="form-group col-md-11">
                 <label for="nome">Nome</label>
-                <input type="text" class="form-control" name="nome" required>
+                <input type="text" class="form-control" name="nome" value="{{old('nome')}}">
             </div>
         </div>
 
@@ -24,7 +31,7 @@
         <div class="form-row">
             <div class="form-group col-md-3">
                 <label for="text">Cidade </label>
-                <input type="codigo" class="form-control" name="cidade">
+                <input type="codigo" class="form-control" name="cidade" value="{{old('cidade')}}">
             </div>
             <div class="form-group col-md-1">
                 <label for="nome">Estado</label>
@@ -61,15 +68,15 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="text">Endereço </label>
-                <input type="text" class="form-control" name="endereco">
+                <input type="text" class="form-control" name="endereco" value="{{old('endereco')}}">
             </div>
             <div class="form-group col-md-2">
                 <label for="nome">Bairro</label>
-                <input type="text" class="form-control" name="bairro">
+                <input type="text" class="form-control" name="bairro" value="{{old('bairro')}}">
             </div>
             <div class="form-group col-md-2">
                 <label for="nome">CEP</label>
-                <input type="text" class="form-control" name="cep">
+                <input type="text" class="form-control" name="cep" value="{{old('cep')}}">
             </div>
         </div>
 
@@ -77,24 +84,24 @@
         <div class="form-row">
             <div class="form-group col-md-3">
                 <label for="nome">Telefone</label>
-                <input type="text" class="form-control" name="tel">
+                <input type="text" class="form-control" name="tel" value="{{old('tel')}}">
             </div>
             <div class="form-group col-md-3">
                 <label for="nome">Celular</label>
-                <input type="text" class="form-control" name="cel">
+                <input type="text" class="form-control" name="cel" value="{{old('cel')}}">
             </div>
 
             <div class="form-group col-md-2">
                 <label for="nome">RG</label>
-                <input type="text" class="form-control" name="rg">
+                <input type="text" class="form-control" name="rg" value="{{old('rg')}}">
             </div>
             <div class="form-group col-md-2">
                 <label for="nome">CPF</label>
-                <input type="text" class="form-control" name="cpf">
+                <input type="text" class="form-control" name="cpf" value="{{old('cpf')}}">
             </div>
             <div class="form-group col-md-2">
                 <label for="nome">Salário</label>
-                <input type="num" class="form-control" name="salario">
+                <input type="num" class="form-control" name="salario" value="{{old('salario')}}">
             </div>
 
         </div>
@@ -112,11 +119,11 @@
             </div>
             <div class="form-group col-md-3">
                 <label for="nome">Data Nascimento</label>
-                <input type="date" class="form-control" name="datanasc">
+                <input type="date" class="form-control" name="datanasc" value="{{old('datanasc')}}">
             </div>
             <div class="form-group col-md-3">
                 <label for="nome">Data Admissão</label>
-                <input type="date" class="form-control" name="dataadmin">
+                <input type="date" class="form-control" name="dataadmin" value="{{old('dataadmin')}}">
 
             </div>
             <div class="form-group col-md-3">
@@ -142,20 +149,21 @@
                             <div class="form-row">
                                 <div class="form-group col-md-3">
                                     <label for="text">Banco </label>
-                                    <input type="text" class="form-control" name="banco">
+                                    <input type="text" class="form-control" name="banco" value="{{old('banco')}}">
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="nome">Agência</label>
-                                    <input type="text" class="form-control" name="agencia">
+                                    <input type="text" class="form-control" name="agencia" value="{{old('agencia')}}">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="nome">Conta</label>
-                                    <input type="text" class="form-control" name="conta"
+                                    <input type="text" class="form-control" name="conta" value="{{old('conta')}}"
                                            placeholder="Conta com o Dígito">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="nome">Tipo da Conta</label>
                                     <input type="text" class="form-control" name="tipoconta"
+                                           value="{{old('tipoconta')}}"
                                            placeholder="Corrente ou Poupança">
                                 </div>
 

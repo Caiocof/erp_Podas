@@ -14,21 +14,20 @@
         <div class="form-row">
             <div class="form-group col-md-12">
                 <label for="nome">Nome</label>
-                <input type="text" class="form-control" name="nome" value="{{$workTeam->TEQUIPE_NOME ?? ''}}" required>
+                <input type="text" class="form-control" name="nome" value="{{$workTeam->TEQUIPE_NOME ?? ''}}">
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-7">
                 <label for="text">Responsável </label>
-                <input type="text" class="form-control" name="responsavel" value="{{$workTeam->TEQUIPE_RESP ?? ''}}"
-                       required>
+                <input type="text" class="form-control" name="responsavel" value="{{$workTeam->TEQUIPE_RESP ?? ''}}">
             </div>
 
             <div class="form-group col-md-5">
                 <label for="nome">Valor Serviço</label>
                 <input type="number" class="form-control" name="valorservico"
-                       value="{{$workTeam->TEQUIPE_VLR_SERV ?? ''}}" required>
+                       value="{{$workTeam->TEQUIPE_VLR_SERV ?? ''}}">
             </div>
         </div>
 

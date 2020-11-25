@@ -13,6 +13,13 @@
     <h1 class="titlePage">LAÇAMENTO DE PRODUÇÕES</h1>
     <hr/>
 
+
+    @foreach($errors->all() as $error)
+        <div class="alert alert-danger" role="alert">
+            {{$error}}
+        </div>
+    @endforeach
+
     <form class="formsProject" action="{{route('uploadProdution')}}" method="POST" autocomplete="off"
           enctype="multipart/form-data">
         @csrf
@@ -22,17 +29,18 @@
         <div class="form-row">
             <div class="form-group col-md-2">
                 <label for="item">Item</label>
-                <input type="number" class="form-control" name="item" required>
+                <input type="number" class="form-control" name="item" value="{{old('item')}}">
             </div>
             <div class="form-group col-md-3">
                 <label for="dataprod">data</label>
-                <input type="date" class="form-control" name="dataprod" required>
+                <input type="date" class="form-control" name="dataprod" value="{{old('dataprod')}}">
             </div>
 
 
             <div class="form-group col-md-6">
                 <label for="inputRegiao">Lt</label>
-                <select id="inputRegiao" class="form-control" name="inputRegiao" required>
+                <select id="inputRegiao" class="form-control" name="inputRegiao" value="{{old('inputRegiao')}}"
+                        required>
                     <option selected>Escolher...</option>
 
                     @foreach ($lts as $lt)
@@ -45,15 +53,15 @@
             <div class="form-row">
                 <div class="form-group col-md-3">
                     <label for="text">Vão </label>
-                    <input type="number" class="form-control" name="vao" required>
+                    <input type="number" class="form-control" name="vao" value="{{old('vao')}}">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="comp">Comprimento</label>
-                    <input type="number" class="form-control" name="comp" id="comp" required>
+                    <input type="number" class="form-control" name="comp" id="comp" value="{{old('comp')}}">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="larg">Largura</label>
-                    <input type="number" class="form-control" name="larg" id="larg" onChange="multiplica()" required>
+                    <input type="number" class="form-control" name="larg" id="larg" onChange="multiplica()">
                 </div>
 
                 <div class="form-group col-md-3">
@@ -65,7 +73,8 @@
             <div class="form-row">
                 <div class="form-group col-md-13">
                     <label for="text">Justificativa</label>
-                    <textarea class="form-control" name="justificativa" id="text" cols="113" rows="3"></textarea>
+                    <textarea class="form-control" name="justificativa" id="text" cols="113" rows="3"
+                              value="{{old('justificativa')}}"></textarea>
 
                 </div>
             </div>
@@ -73,13 +82,13 @@
             <div class="form-row imgForm">
                 <div class="form-group col-md-6">
                     <label for="nome">Imagem Antes</label>
-                    <input type="file" class="form-control" name="img_antes" required>
+                    <input type="file" class="form-control" name="img_antes" value="{{old('img_antes')}}">
                 </div>
 
 
                 <div class="form-group col-md-6">
                     <label for="nome">Imagem Depois</label>
-                    <input type="file" class="form-control" name="img_depois" required>
+                    <input type="file" class="form-control" name="img_depois" value="{{old('img_depois')}}">
                 </div>
             </div>
         </div>

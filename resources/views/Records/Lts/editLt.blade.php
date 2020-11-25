@@ -3,6 +3,12 @@
     <h1 class="titlePage">EDITAR LT's</h1>
     <hr/>
 
+    @foreach($errors->all() as $error)
+        <div class="alert alert-danger" role="alert">
+            {{$error}}
+        </div>
+    @endforeach
+
     <form class="formsProject" action="{{route('saveEditLts',['id' => $lt->TLT_ID_PK])}}" method="POST"
           autocomplete="off"
           enctype="multipart/form-data">

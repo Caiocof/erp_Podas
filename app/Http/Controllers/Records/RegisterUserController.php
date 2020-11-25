@@ -28,6 +28,18 @@ class RegisterUserController extends Controller
      */
     public function store(Request $request)
     {
+        if (!Auth::check() === true) {
+            return redirect()->route('login');
+        }
+
+        $requireds = [
+            'nome' => 'required',
+            'email' => 'required',
+            'senha' => 'required',
+        ];
+
+        $request->validate($requireds);
+
         $user = [
             'name' => $request->nome,
             'email' => $request->email,
@@ -40,48 +52,4 @@ class RegisterUserController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param \App\Models\User $User
-     * @return \Illuminate\Http\Response
-     */
-    public function show(User $User)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param \App\Models\User $rUser
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(User $User)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Models\User $User
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, User $User)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param \App\Models\User $rUser
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(User $User)
-    {
-        //
-    }
 }
